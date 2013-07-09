@@ -19,7 +19,7 @@ include_once 'conecta.inc.php';
 	</tr>
 	
 	<?php
-	$result = mysql_query ( "SELECT F.*, G.Descricao as genero FROM filme F LEFT JOIN genero G on f.idGenero = g.idGenero" );
+	$result = mysql_query ( "SELECT F.*, G.Descricao as genero FROM filme F LEFT JOIN genero G on f.idGenero = g.idGenero order by idFilme" );
 	
 	while ( $row = mysql_fetch_array ( $result, MYSQL_ASSOC ) ) {
 		?>

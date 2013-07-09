@@ -16,15 +16,15 @@ include_once 'conecta.inc.php';
 	</tr>
 	
 	<?php
-	$result = mysql_query ( "SELECT idGenero, descricao FROM genero" );
+	$result = mysql_query ( "SELECT idGenero, descricao FROM genero order by idGenero" );
 	
 	while ( $row = mysql_fetch_array ( $result, MYSQL_ASSOC ) ) {
 		?>
 		<tr>
 		<td><?=$row["idGenero"]?></td>
 		<td><?=$row["descricao"]?></td>
-		<td><a href="genero.php?id=<?=$row["idGenero"]?>">Alterar</a> |
-			<a href="excluirgenero.php?id=<?=$row["idGenero"]?>">Excluir</a></td>
+		<td><a href="genero.php?id=<?=$row["idGenero"]?>">Alterar</a> | <a
+			href="excluirgenero.php?id=<?=$row["idGenero"]?>">Excluir</a></td>
 	</tr>
 		<?php  }?>
 	<?php

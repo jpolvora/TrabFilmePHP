@@ -117,7 +117,7 @@ if ($_SERVER ['REQUEST_METHOD'] === 'GET') {
 		<div class="editor-field">
 			<select id="idGenero" name="idGenero"><option value=""></option>
 			<?php
-			$resultGeneros = mysql_query ( "SELECT idGenero, descricao from Genero" );
+			$resultGeneros = mysql_query ( "SELECT idGenero, descricao from Genero order by idGenero " );
 			while ( $row = mysql_fetch_array ( $resultGeneros, MYSQL_ASSOC ) ) {
 				?>
 				<option
