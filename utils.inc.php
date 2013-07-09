@@ -63,6 +63,16 @@ function validaFilme($edicao) {
 	if ($erro) {
 		return "Preencha todos os campos!";
 	} else {
+		
+		$ano = $_POST ['AnoLancamento'];
+		$duracao = $_POST ['Duracao'];
+		
+		if ($ano <= 1900 or $ano >= 2100)
+			return "Ano deve ser preenchido com um valor entre 1900 e 2100";
+		
+		if ($duracao <= 0)
+			return "Duracao deve ser preenchido com um valor maior que zero";		
+		
 		if ($edicao == true) {
 			return true;
 		} else {
@@ -73,7 +83,7 @@ function validaFilme($edicao) {
 				return "Filme ja existe !!!";
 			}
 		}
-	}
+	}	
 	
 	return true;
 }

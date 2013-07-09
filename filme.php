@@ -80,7 +80,7 @@ if ($_SERVER ['REQUEST_METHOD'] === 'GET') {
 }
 ?>
 
-<h2>Edit</h2>
+<h2>Dados do Filme</h2>
 
 <form
 	action="<?=htmlentities($_SERVER['PHP_SELF'] . '?' . $_SERVER['QUERY_STRING'])?>"
